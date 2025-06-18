@@ -38,4 +38,4 @@ jobs:
       - name: Output information
         run: |        
           echo "The username is $(MONGODB_USERNAME)"
-          echo "The database is $(MONGODB_DB_NAME)"
+          echo "The database name is $(MONGODB_DB_NAME)"
