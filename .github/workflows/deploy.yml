@@ -32,6 +32,8 @@ jobs:
       - name: Output information
         run: echo "The Servername is ${{ env.MONGODB_CLUSTER_ADDRESS }}"
   deploy:
+    env:
+      MONGODB_USERNAME: wasif
     needs: test
     runs-on: ubuntu-latest
     steps:
