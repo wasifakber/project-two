@@ -12,7 +12,7 @@ jobs:
       MONGODB_CLUSTER_ADDRESS: cluster0.vdrjqqx.mongodb.net
       MONGODB_USERNAME: wasif 
       MONGODB_PASSWORD: aA3asUSNk04VUcwS
-      PORT: 3000
+      PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
     steps:
