@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        run: echo "The Servername is $(( MONGODB_CLUSTER_ADDRESS) )"
+        run: echo "The Servername is $(( MONGODB_CLUSTER_ADDRESS ))"
   deploy:
     needs: test
     runs-on: ubuntu-latest
