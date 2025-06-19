@@ -32,6 +32,7 @@ jobs:
       - name: Output information
         run: echo "The Servername is ${{ env.MONGODB_CLUSTER_ADDRESS }}"
   deploy:
+    environment: QA
     env:
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
     needs: test
@@ -39,5 +40,5 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "The username is ${{ env.MONGODB_USERNAME }}"
+          echo "The username is ${{ secrets.MONGODB_USERNAME }}"
           echo "The database name is ${{ env.MONGODB_DB_NAME }}"
