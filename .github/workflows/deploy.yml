@@ -8,7 +8,7 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-##    environment: QA ## This is github Environment at wasifakber/github-actions repository
+    environment: QA ## This is github Environment at wasifakber/github-actions repository
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.vdrjqqx.mongodb.net
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
