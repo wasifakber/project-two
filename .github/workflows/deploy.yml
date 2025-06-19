@@ -34,7 +34,7 @@ jobs:
         run: echo "The Servername is ${{ env.MONGODB_CLUSTER_ADDRESS }}"
   deploy:
     env:
-      MONGODB_USERNAME: wasif
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
     needs: test
     runs-on: ubuntu-latest
     steps:
