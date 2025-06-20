@@ -13,7 +13,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v4
       - name: Install Mode
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
