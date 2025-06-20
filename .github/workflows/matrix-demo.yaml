@@ -1,0 +1,21 @@
+## matrix Demo
+name: Matrix Demo
+on: push
+jobs:
+  builds:
+    strategy:
+      matrix: ## it will run on all Operations systems
+        node-version: [12, 14, 16]
+        operating-system: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.operating-system }} ## it will run on all operating systems in the list in parallel
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Install Mode
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Project
+        run: npm run build
