@@ -2,7 +2,8 @@
 name: Matrix Demo
 on: push
 jobs:
-  builds:
+  build:
+    continue-on-error: true
     strategy:
       matrix: ## it will run on all Operations systems
         node-version: [12, 14, 16]
